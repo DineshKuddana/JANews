@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Images with Text Content</title>
+	<style>
+		.image-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 50px;
+		}
+		/* .image-grid img {
+			max-width: 100%;
+			height: auto;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px #ccc;
+		} */
+		.image-grid .image {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+		.image-grid .image .content {
+			margin-top: 10px;
+			font-size: 2em;
+		}
+
+        .content{
+            margin-bottom: 30px;
+            color: rgb(255, 255, 255);
+			font-size: 100px;
+        }
+
+        .image{
+            margin-top: 100px;
+        }
+		@media only screen and (max-width: 768px) {
+			.image-grid .image {
+				flex-basis: calc(33.33% - 20px);
+			}
+		}
+
+        .head{
+            text-align: center;
+            font-size: 70px;
+            text-transform: uppercase;
+            font-family:Arial, Helvetica, sans-serif;
+            color:rgb(255, 255, 255);
+            border-bottom: 5px solid rgb(253, 253, 253);
+            width:900px;
+            margin-left: 300px;
+        }
+
+        body{
+            background-color:rgb(0, 0, 0);
+            border: 2px solid rgb(233, 177, 66);
+            border-radius: 6px;
+            box-shadow: 0px 0px 25px rgb(202, 229, 24);
+            margin: 25px;
+        }
+	</style>
+</head>
+<body>
+    <h1 class="head">Technical Fests 2K23</h1>
+	<div class="image-grid">
+		<div class="image">
+			<img src="cse.jfif" width="400px" height="360px">
+			<div class="content">CSE</div>
+		</div>
+		<div class="image">
+			<img src="ece.jfif" width="400px" height="360px">
+			<div class="content">ECE</div>
+		</div>
+		<div class="image">
+			<img src="eee.jfif" width="400px" height="360px">
+			<div class="content">EEE</div>
+		</div>
+		<div class="image">
+			<img src="civil.jfif" width="400px" height="360px">
+			<div class="content">CIVIL</div>
+		</div>
+		<div class="image">
+			<img src="chem.jfif" width="400px" height="360px">
+			<div class="content">CHEMICAL</div>
+		</div>
+		<div class="image">
+			<img src="mech.jfif" width="400px" height="360px">
+			<div class="content">MECHANICAL</div>
+		</div>
+	</div>
+</body>
+</html>

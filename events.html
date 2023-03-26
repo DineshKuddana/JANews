@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image and Text Layout</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			margin: 50px;
+		}
+
+		.image1 {
+			flex-basis: 50%;
+			order: 1;
+			margin-right: 50px;
+		}
+
+		.image1 img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.content1 {
+			flex-basis: 50%;
+			order: 2;
+			margin-left: 50px;
+            color: white;
+		}
+        .content{
+            color: white;
+        }
+        .kuchi {
+            text-align: center;
+            font-size: 90px;
+            color: rgb(151, 104, 47);
+
+        }
+        body{
+            background-color: black;
+            border: 5px solid rgb(155, 155, 59);
+            margin: 20px;
+            box-shadow: 0px 0px 25px rgb(242, 168, 8);
+
+        }
+	</style>
+</head>
+<body>
+    <h1 class="kuchi">COLLEGE DAY</h1>
+	<div class="container">
+		<div class="image1">
+			<img src="1.jfif" alt="Placeholder Image">
+		</div>
+		<div class="content1">
+			<h2>75 Years Celebrations</h2>
+			<p>The prestigious Technological Institution, JNTUA College of Engineering, Anantapuram is celebrating 75 years of glorious existence on 16th, 17th and 18th of December, 2021. This temple of higher learning was established in 1946.</p>
+		</div>
+	</div>
+
+
+
+	<div class="container">
+		<div class="content">
+			<h2>Content Title</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor quam sed dolor ultricies aliquet. In convallis metus vel tellus vehicula <br> vel dignissim libero scelerisque. Nullam consequat, justo a laoreet fringilla, nunc nulla faucibus massa, non dapibus enim sapien vitae magna. Nam varius aliquam massa, vel rutrum enim facilisis a.</p>
+		</div>
+		<div class="image2">
+			<img src="2.jfif" alt="Placeholder Image" width="700px">
+		</div>
+	</div>
+
+    <div class="container">
+		<div class="image1">
+			<img src="3.jfif" alt="Placeholder Image">
+		</div>
+		<div class="content1">
+			<h2>Content Title</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor quam sed dolor ultricies aliquet. In convallis metus vel tellus vehicula vel dignissim libero scelerisque. Nullam consequat, justo a laoreet fringilla, nunc nulla faucibus massa, non dapibus enim sapien vitae magna. Nam varius aliquam massa, vel rutrum enim facilisis a.</p>
+		</div>
+	</div>
+</body>
+</html>
