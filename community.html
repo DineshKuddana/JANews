@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Slider</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #dad3da;
+          }
+          
+          .slider{
+            width: 800px;
+            height: 700px;
+            border-radius: 10px;
+            overflow: hidden;
+           
+           margin-left: 150px;
+          }
+          
+          .slides{
+            width: 500%;
+            height: 500px;
+            display: flex;
+          }
+          
+          .slides input{
+            display: none;
+          }
+          
+          .slide{
+            width: 20%;
+            transition: 1s;
+          }
+          
+          .slide img{
+            width: 800px;
+            height: 500px;
+          }
+          
+          /* /css for manual slide navigation/ */
+          
+          .navigation-manual{
+            position: absolute;
+            width: 800px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+          }
+          
+          .manual-btn{
+            border: 2px solid #fefefe;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+          }
+          
+          .manual-btn:not(:last-child){
+            margin-right: 40px;
+          }
+          
+          .manual-btn:hover{
+            background: #40D3DC;
+          }
+          
+          #radio1:checked ~ .first{
+            margin-left: 0;
+          }
+          
+          #radio2:checked ~ .first{
+            margin-left: -20%;
+          }
+          
+          #radio3:checked ~ .first{
+            margin-left: -40%;
+          }
+          
+          #radio4:checked ~ .first{
+            margin-left: -60%;
+          }
+          
+          /* /css for automatic navigation/ */
+          
+          .navigation-auto{
+            position: absolute;
+            display: flex;
+            width: 800px;
+            justify-content: center;
+            margin-top: 460px;
+          }
+          
+          .navigation-auto div{
+            border: 2px solid #000000;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 0.5s;
+          }
+          
+          .navigation-auto div:not(:last-child){
+            margin-right: 40px;
+          }
+          
+          #radio1:checked ~ .navigation-auto .auto-btn1{
+            background: #fdfdfd;
+          }
+          
+          #radio2:checked ~ .navigation-auto .auto-btn2{
+            background: #fd0404;
+          }
+          
+          #radio3:checked ~ .navigation-auto .auto-btn3{
+            background: #02fd2c;
+          }
+          
+          #radio4:checked ~ .navigation-auto .auto-btn4{
+            background:#6d0bed;
+        }
+
+        h1{
+            color:rgb(179, 13, 182);
+            font-size: 70px;
+            text-align: center;
+            border-bottom: 5px solid rgb(95, 193, 232);
+            width:710px;
+            margin-left: 40px;
+            border-radius: 60px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        .appc{
+            margin-bottom: -20px;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .new{
+            margin-top: 800px;
+            margin-left: -500px;
+            padding-right:200px;
+            font-size: 20px;
+            
+        }
+       
+    </style>
+  </head>
+  <body>
+
+    <!--image slider start-->
+    <div class="slider">
+        <a href="https://www.linkedin.com/in/communityappc/?originalSubdomain=in" target="_blank">
+        <h1><img src="appc.png" width="100px" height="100px" class="appc">&nbsp;APPC Community</h1></a>
+        
+      <div class="slides">
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+          <img src="pic-1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="pic-2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="pic-33.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="pic-4.jpg" alt="">
+        </div>
+        <!--slide images end-->
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div><br>
+
+    <div class="new">
+        <a href="communitymatter.html">Click here to know about the APPC Community</a>
+    </div>
+
+    
+    <script type="text/javascript">
+    var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 4){
+        counter = 1;
+      }
+    }, 2000);
+    </script>
+
+ </body>
+</html>
